@@ -11,7 +11,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { image, headerText } from 'settings'
 import { SolanaTimeProvider } from "@/utils/SolanaTimeContext";
 
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
 export default function App({ Component, pageProps }: AppProps) {
   let network = WalletAdapterNetwork.Devnet;
   if (process.env.NEXT_PUBLIC_ENVIRONMENT === "mainnet-beta" || process.env.NEXT_PUBLIC_ENVIRONMENT === "mainnet") {
@@ -27,6 +27,7 @@ export default function App({ Component, pageProps }: AppProps) {
     []
   );
   return (
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     <>
       <Head>
         <meta property="og:type" content="website" />
